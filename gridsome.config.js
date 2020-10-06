@@ -1,8 +1,18 @@
 module.exports = {
-  siteName: 'Gridsome starter bootstrap',
-  siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
+  siteName: 'Neoma Mullens, PhD',
+  siteDescription: 'Dr. Neoma Mullens is an expert on college access intermediary organizations and educational policy.A starter project for Gridsome with Bootstrap and some other useful tools.',
   siteUrl: 'https://gridsome-starter-bootstrap.loke.dev',
   plugins: [
+    {
+      use: '@gridsome/source-contentful',
+      options: {
+        space: '0h35jhkl4pxm', // required
+        accessToken: 'G_2NNdA4L_50PX7_M0TGj6ppRXbIMjldgi9vttoN3SU', // required
+        host: 'cdn.contentful.com',
+        environment: 'master',
+        typeName: 'Contentful'
+      }
+    },
     {
       use: '@gridsome/source-filesystem',
       options: {
@@ -15,6 +25,7 @@ module.exports = {
         },
       },
     },
+
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
