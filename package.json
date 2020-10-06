@@ -6,10 +6,10 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^14.1.1",
     "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-contentful": "^0.6.0",
-    "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/transformer-remark": "^0.6.1",
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.15.0",

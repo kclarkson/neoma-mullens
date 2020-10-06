@@ -22,19 +22,7 @@
 </template>
 
 <page-query>
-query Blog {
-	posts: allBlogPost(sortBy: "date") {
-    edges {
-      node {
-        id
-        path
-        title
-        excerpt
-        image
-      }
-    }
-  }
-}
+
 </page-query>
 
 <style lang="scss" scoped>

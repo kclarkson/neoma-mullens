@@ -23,7 +23,7 @@
 </template>
 
 <page-query>
-query BlogPost ($path: String!) {
+<!-- query BlogPost ($path: String!) {
   post: blogPost (path: $path) {
     title
     author
@@ -32,7 +32,7 @@ query BlogPost ($path: String!) {
     content
     image
   }
-}
+} -->
 </page-query>
 
 <script>
@@ -59,7 +59,7 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 0 20px 0 0;
-  
+
   .label {
     font-weight: bold;
   }
