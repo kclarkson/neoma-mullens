@@ -1,11 +1,11 @@
 module.exports = {
   siteName: 'Neoma Mullens, PhD',
-  siteDescription: 'Dr. Neoma Mullens is an expert on college access intermediary organizations and educational policy.A starter project for Gridsome with Bootstrap and some other useful tools.',
-  siteUrl: 'https://gridsome-starter-bootstrap.loke.dev',
+  siteDescription: 'Dr. Neoma Mullens is an expert on college access intermediary organizations and educational policy.',
+  siteUrl: 'https://www.neomamullens.com',
 
   templates: {
-    ContentfulPage: '/:url',
-    ContentfulBlog: '/articles/:url'
+    ContentfulPage: '/:slug',
+    ContentfulArticle: '/article/:slug'
   },
 
   plugins: [
@@ -26,6 +26,7 @@ module.exports = {
         id: 'UA-72659574-10'
       }
     },
+
     {
       use: '@gridsome/plugin-sitemap',
       options: {
@@ -33,6 +34,12 @@ module.exports = {
       }
     }
   ],
+  transformers: {
+    remark: {
+      externalLinksTarget: "_blank",
+      externalLinksRel: ["nofollow", "noopener", "noreferrer"]
+    }
+  },
   css: {
     loaderOptions: {
       scss: {
